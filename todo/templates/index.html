@@ -8,6 +8,11 @@
 <body>
     <h1>list</h1>
 
+    <form action="" method="post">
+        <input type="text" placeholder="tarea..."/>
+        <input type="submit" value="agregar">    
+    </form>
+
     <ul>
         {% for task in tasks %}
         <li>{{ task.title }}</li>
