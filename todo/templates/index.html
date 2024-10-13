@@ -7,7 +7,20 @@
 </head>
 <body>
     <h1>list</h1>
-
+    <form method="POST">
+        {% csrf_token %}
+        <label for="title">Nombre de la tarea:</label>
+        <input type="text" id="title" name="title" required><br><br> 
+    
+        <label for="description">Descripción:</label>
+        <textarea id="description" name="description"></textarea><br><br>
+    
+        <label for="completed">Completada:</label>
+        <input type="checkbox" id="completed" name="completed"><br><br>
+    
+        <button type="submit">Crear Tarea</button>
+    </form>
+    <h2>tareas actuales</h2>
     <ul>
         {% for task in tasks %}
         <li>{{ task.title }}</li>
